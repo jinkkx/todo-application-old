@@ -25,7 +25,7 @@ pipeline{
 
         stage('Push Docker Image to Docker Hub'){
             steps{
-                sh 'docker login -u jinkx -old -p Akola@123'
+                sh 'docker login -u jinkxdocker -p Akola@123'
                 sh 'docker tag todo-application-image:latest jinkxdocker/todo-application:latest'
                 sh 'docker push jinkxdocker/todo-application:latest'
             }
